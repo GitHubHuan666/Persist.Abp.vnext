@@ -24,6 +24,8 @@ namespace Persist.Abp.vnext
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.InitializeApplication();
+
+
         }
     }
 }
