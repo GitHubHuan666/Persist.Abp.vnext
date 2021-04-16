@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="3.3.2" />
+    <PackageReference Include="Volo.Abp.Ddd.Application" Version="3.3.2" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="3.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Persist.Abp.vnext.Application.Contracts\Persist.Abp.vnext.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Persist.Abp.vnext.Domain\Persist.Abp.vnext.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
