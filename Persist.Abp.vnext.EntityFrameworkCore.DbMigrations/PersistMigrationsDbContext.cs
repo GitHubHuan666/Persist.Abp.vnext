@@ -7,7 +7,7 @@ using Volo.Abp.EntityFrameworkCore;
 
 namespace Persist.Abp.vnext.EntityFrameworkCore.DbMigrations
 {
-    [ConnectionStringName("Novel")]
+    [ConnectionStringName("Persist")]
     public class PersistMigrationsDbContext : AbpDbContext<PersistMigrationsDbContext>
     {
         public PersistMigrationsDbContext(DbContextOptions<PersistMigrationsDbContext> options) : base(options)

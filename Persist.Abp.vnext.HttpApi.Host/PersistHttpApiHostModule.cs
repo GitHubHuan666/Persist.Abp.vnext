@@ -34,7 +34,7 @@ namespace Persist.Abp.vnext.HttpApi.Host
             context.Services.AddSwaggerGen(
                 options =>
                 {
-                    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Novel API", Version = "v1" });
+                    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Persist API", Version = "v1" });
                     options.DocInclusionPredicate((docName, description) => true);
                     options.CustomSchemaIds(type => type.FullName);
                 });
@@ -55,7 +55,7 @@ namespace Persist.Abp.vnext.HttpApi.Host
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Novel API");
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Persist API");
             });
 
 
