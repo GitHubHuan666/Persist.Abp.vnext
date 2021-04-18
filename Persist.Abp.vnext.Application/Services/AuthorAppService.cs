@@ -16,9 +16,9 @@ namespace Persist.Abp.vnext.Application.Services
 {
     public class AuthorAppService : ApplicationService, IAuthorAppService
     {
-        private readonly IAtuthorRepository _authorRepository;
+        private readonly IAuthorRepository _authorRepository;
 
-        public AuthorAppService(IAtuthorRepository authorRepository)
+        public AuthorAppService(IAuthorRepository authorRepository)
         {
             _authorRepository = authorRepository;
         }

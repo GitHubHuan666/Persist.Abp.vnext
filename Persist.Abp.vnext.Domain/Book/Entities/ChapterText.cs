@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Volo.Abp.Domain.Entities;
 
-namespace Persist.Abp.vnext.Domain.Book.Entites
+namespace Persist.Abp.vnext.Domain.Book.Entities
 {
     public class ChapterText : Entity<string>
     {

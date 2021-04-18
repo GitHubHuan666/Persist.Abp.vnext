@@ -11,7 +11,7 @@ namespace Persist.Abp.vnext.Domain.Author.Entities
         public string Name { get; set; }
 
         public string Description { get; set; }
-
+        public override string Id { get; protected set; } = Guid.NewGuid().ToString();
         protected Author()
         {
 

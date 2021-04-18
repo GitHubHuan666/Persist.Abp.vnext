@@ -1,27 +1,29 @@
-﻿using Persist.Abp.vnext.Domain.Book.Entites;
+﻿using Persist.Abp.vnext.Domain.Author.Repository;
+using Persist.Abp.vnext.Domain.Book.Entities;
+using Persist.Abp.vnext.Domain.Book.Repository;
+using Persist.Abp.vnext.Domain.Category.Repository;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
-using Volo.Abp.Domain.Repositories;
 using Volo.Abp.Guids;
 using Volo.Abp.Uow;
 
-namespace Persist.Abp.vnext.Domain
+namespace Persist.Abp.vnext.Domain.Data
 {
     public class PersistDataSeedContributor : IDataSeedContributor, ITransientDependency
     {
-        private readonly IRepository<Author.Entities.Author, string> _authorRepository;
-        private readonly IRepository<Book.Entites.Book, string> _bookRepository;
-        private readonly IRepository<Category.Entities.Category, string> _categoryRepository;
+        private readonly IAuthorRepository _authorRepository;
+        private readonly IBookRepository _bookRepository;
+        private readonly ICategoryRepository _categoryRepository;
         private readonly List<Guid> _guids;
 
         public PersistDataSeedContributor(
-            IRepository<Author.Entities.Author, string> authorRepository,
-            IRepository<Book.Entites.Book, string> bookRepository,
-            IRepository<Category.Entities.Category, string> categoryRepository,
+            IAuthorRepository authorRepository,
+            IBookRepository bookRepository,
+            ICategoryRepository categoryRepository,
             IGuidGenerator guidGenerator)
         {
             _authorRepository = authorRepository;
@@ -39,8 +41,8 @@ namespace Persist.Abp.vnext.Domain
         public async Task SeedAsync(DataSeedContext context)
         {
             await CreateAuthorAsync();
-            await CreateBookAsync();
             await CreateCategoryAsync();
+            await CreateBookAsync();
         }
 
         public async Task CreateAuthorAsync()
@@ -68,7 +70,7 @@ namespace Persist.Abp.vnext.Domain
         public async Task CreateBookAsync()
         {
 
-            var book = new Book.Entites.Book(
+            var book = new Book.Entities.Book(
                 _guids[2].ToString(),
                 "盗墓笔记",
                 "盗墓题材小说，讲述古墓探险的故事",

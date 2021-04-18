@@ -1,4 +1,4 @@
-﻿using Persist.Abp.vnext.Domain.Book.Entites;
+﻿using Persist.Abp.vnext.Domain.Book.Entities;
 using Persist.Abp.vnext.Domain.Book.Repository;
 using Shouldly;
 using System;

@@ -11,7 +11,7 @@ using Volo.Abp.Linq;
 
 namespace Persist.Abp.vnext.Domain.Author.Repository
 {
-    public interface   IAtuthorRepository : IRepository<Entities.Author,string>
+    public interface   IAuthorRepository : IRepository<Entities.Author,string>
     {
         
     }

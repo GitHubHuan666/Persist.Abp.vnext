@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Persist.Abp.vnext.Domain.Book.Entites;
+using Persist.Abp.vnext.Domain.Book.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;

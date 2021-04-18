@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Persist.Abp.vnext.Domain.Author.Entities;
-using Persist.Abp.vnext.Domain.Book.Entites;
+using Persist.Abp.vnext.Domain.Book.Entities;
 using Persist.Abp.vnext.Domain.Category.Entities;
 using System;
 using System.Collections.Generic;

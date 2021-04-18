@@ -8,7 +8,7 @@ using Volo.Abp.EntityFrameworkCore;
 
 namespace Persist.Abp.vnext.EntityFrameworkCore.Repositories
 {
-    public class AuthorRepository : EfCoreRepository<PersistDbContext, Author, string>, IAtuthorRepository
+    public class AuthorRepository : EfCoreRepository<PersistDbContext, Author, string>, IAuthorRepository
     {
         public AuthorRepository(IDbContextProvider<PersistDbContext> dbContextProvider) : base(dbContextProvider)
         {
